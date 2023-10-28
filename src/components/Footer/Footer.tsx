@@ -1,29 +1,21 @@
-
-import Card from 'react-bootstrap/Card'
-
+import React from 'react';
+import { MDBFooter } from 'mdb-react-ui-kit';
 
 const Footer = () => {
     /* const navigate=useNavigate(); */
 
     return(
         <>
-        <footer>
-            <Card>
-                <Card.Header>Footer asi nomas</Card.Header>
-                <Card.Body>
-                    <blockquote className="blockquote mb-0">
-                    <p>
-                        {' '}
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                        posuere erat a ante.{' '}
-                    </p>
-                    <footer className="blockquote-footer">
-                        Someone famous in <cite title="Source Title">Source Title</cite>
-                    </footer>
-                    </blockquote>
-                </Card.Body>
-            </Card>
-            </footer>
+        
+    <MDBFooter bgColor='light' className='text-center text-lg-left'>
+      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+        &copy; {new Date().getFullYear()} Copyright:{' '}
+        <a className='text-dark' href='https://mdbootstrap.com/'>
+          MDBootstrap.com
+        </a>
+      </div>
+    </MDBFooter>
+
         </>
     );
 }
