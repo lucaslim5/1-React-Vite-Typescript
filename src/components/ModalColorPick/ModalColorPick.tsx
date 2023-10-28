@@ -1,6 +1,5 @@
 import { useState } from "react"
-import React from 'react';
-import { Button, Modal, Form } from "react-bootstrap";
+import { Button, FormControl, FormLabel, Modal, ModalTitle} from "react-bootstrap";
 
 type MyModalProps={
     show: boolean;
@@ -18,16 +17,16 @@ const ModalColorPick = ({show, onHide, handleColorChange}:MyModalProps) => {
     //y se cierra el modal
     const handleAcceptClick=()=>{
         handleColorChange(selectedColor);
-        onHide;
+        onHide();
     }
   return (
     <Modal show={show} onHide={onHide} centered backdrop='static'>
         <Modal.Header closeButton>
-            <Modal.Title> Cambiar color </Modal.Title>
+            <ModalTitle> Cambiar color </ModalTitle>
         </Modal.Header>
         <Modal.Body>
-            <Form.Label htmlFor="exampleColorInput"> Elije un color </Form.Label>
-            <Form.Control 
+            <FormLabel htmlFor="exampleColorInput"> Elije un color </FormLabel>
+            <FormControl 
             type='color'
             id='exampleColorInput'
             defaultValue='#FFF'
